@@ -50,7 +50,7 @@ describe("BookDatabase", function () {
     const { bookDatabase, owner, otherAccount } = await loadFixture(deployFixture);
     const instance = bookDatabase.connect(otherAccount)
 
-    await bookDatabase.registerBook({ title: 'Livro 1', year: 2026})
+    await bookDatabase.registerBook({ title: 'Livro 1', year: 2026 })
     await expect(instance.removeBook(1)).to.be.revertedWith("You don't have permission.");
   });
 });
