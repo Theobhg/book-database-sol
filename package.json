@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "hardhat test"
+    "start": "hardhat node",
+    "test": "hardhat test",
+    "deploy": "npx hardhat ignition deploy ignition/modules/BookDatabase.ts --network local",
+    "console": "hardhat console"
   },
   "keywords": [],
   "author": "",
